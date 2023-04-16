@@ -1,0 +1,149 @@
+:root{
+    --bgcolor1: #1A4855;
+    --bgcolor2: #628E75;
+    --whiteTxt: #F9F9F9;
+}
+
+/*FONTS*/
+@font-face{
+    font-family: "Poppins-Black";
+    src: url(fonts/Poppins-Black.ttf);
+    font-family: "Poppins-Bold";
+    src: url(fonts/Poppins-Bold.ttf);
+    font-family: "Poppins-Medium";
+    src: url(fonts/Poppins-Medium.ttf);
+    font-family: "Poppins-Regular";
+    src: url(fonts/Poppins-Regular.ttf);
+    font-family: "Poppins-SemiBold";
+    src: url(fonts/Poppins-SemiBold.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #628E75, #1A4855);
+    margin-bottom: 70px;
+}
+
+/*Header position and configuration*/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+div#logo{
+    padding: 25px;
+}
+
+div#icons{
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+}
+
+/*Main content position and style*/
+#main-div{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 26px 0px 26px;
+}
+
+p#author{
+    color: var(--whiteTxt);
+    font-family: "Poppins-SemiBold", sans-serif;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+h1{
+    color: var(--whiteTxt);
+    font-family: "Poppins-Bold", sans-serif;
+    text-align: left;
+    font-size: 56px;
+    margin-bottom: 16px;
+}
+
+p#text{
+    font-family: 'Poppins-Regular', sans-serif;
+    color: var(--whiteTxt);
+    font-size: 14px; 
+    text-align: justify;
+    margin-bottom: 58px;
+}
+
+.button, a {
+    background-color: #658e76;
+    color: var(--whiteTxt);
+    font-family: "Poppins-Medium", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    width: 210px;
+    height: 45px;
+    border: none;
+    margin-right: 20px;
+    /*responsável por inclinar o botão*/
+    transform: skew(-25deg);
+    text-decoration: none;
+  }
+
+.button:hover{
+    cursor: pointer;
+    background-color: var(--bgcolor1);
+    transition: .5;
+  }
+  a:hover{
+    background-color: var(--bgcolor1);
+  }
+
+
+  #trailer{
+    display: none;
+  }
+
+
+/*Illustartion config*/
+div#ilustration{
+    background-image: url(image/ilustracao_mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 220px;
+}
+
+    /*DESKTOP APPS*/
+
+    @media screen and (min-width: 600px) {
+        body{
+            margin-bottom: 0px;
+        }
+        #main-div{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        div#ilustration{
+            background-image: url(image/ilustracao.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 500px;
+            height: 370px; 
+        }
+        #trailer{
+            display: inline-block;
+            margin-left: 0px;
+            background-color: transparent;
+            border: 4px solid #658e76;
+            margin-top: 15px;
+        }
+        #trailer:hover{
+            transition: .5;
+            background-color: #658e76;
+        }
+      }
